@@ -26,6 +26,7 @@ jobs:
             wget https://github.com/ArduCAM/Arducam-Pivariety-V4L2-Driver/releases/download/libcamera-v0.0.5/libcamera-dev-0.0.12-bullseye-arm64.deb
             dpkg -i libcamera-dev-0.0.12-bullseye-arm64.deb
             apt-get -f install
+            find /usr/lib | grep -e "*libcamera.so*"
             cmake -B build-pi -DCMAKE_BUILD_TYPE=Release
             cmake --build build-pi -j 4
 
