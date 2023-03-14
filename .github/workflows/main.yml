@@ -31,8 +31,6 @@ jobs:
 
     - run: find .
     
-    - run: find / | grep -e "libcamera.so"
-
     - uses: actions/upload-artifact@master
       with:
         name: libcamera-driver
